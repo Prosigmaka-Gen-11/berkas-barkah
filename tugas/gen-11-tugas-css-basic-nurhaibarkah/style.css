@@ -1,0 +1,203 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@300;400;500;600;700;800&family=Roboto+Condensed:ital@1&family=Roboto:ital,wght@0,100;0,400;1,300&display=swap");
+
+.img {
+  background-image: url("bg.jpg");
+}
+
+.sip {
+  width: 200px;
+  height: 70px;
+  text-align: center;
+  background-color: cyan;
+  margin-left: 35%;
+  margin-bottom: 10px;
+  border: 3px solid yellow;
+  border-radius: 20px;
+  position: sticky;
+  top: 0;
+}
+
+.tesbg {
+  background-color: green;
+}
+
+p.color {
+  background-color: yellow;
+}
+
+.bgopacity {
+  background: rgba(0, 128, 0, 0.2);
+}
+
+#inimargin {
+  background-color: aquamarine;
+  margin: 25px 50px 75px 100px;
+}
+
+#inimargincolaps {
+  background-color: aquamarine;
+  margin: 20px 0 0 0;
+}
+
+.inipadding {
+  background-color: red;
+  padding: 20px 20px 20px 20px;
+  display: inline-block;
+}
+
+#boxmodel {
+  color: aquamarine;
+  width: 150px;
+  border: 15px solid green;
+  padding: 50px;
+  margin: 20px;
+}
+
+p.outln {
+  color: white;
+  outline: dotted red;
+}
+
+.text2 {
+  background-color: Tomato;
+  text-align: center;
+}
+
+.text1 {
+  background-color: Orange;
+  text-decoration: line-through;
+}
+
+.text3 {
+  background-color: Tomato;
+  text-transform: capitalize;
+}
+
+.font {
+  background-color: SlateBlue;
+  font-family: "Lucida Console", "Courier New", monospace;
+}
+
+a:link,
+a:visited {
+  background-color: #f44336;
+  color: white;
+  padding: 14px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+a:hover,
+a:active {
+  background-color: blue;
+}
+
+ol.list {
+  list-style-type: upper-roman;
+}
+
+.bgcolor {
+  background-color: Violet;
+}
+
+#initable {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#initable td,
+#initable th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#initable tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+#initable tr:hover {
+  background-color: #ddd;
+}
+
+#initable th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: cyan;
+  color: white;
+}
+
+span.block {
+  background-color: LightGray;
+  display: block;
+}
+
+span.inlineblock {
+  background-color: LightGray;
+  display: inline-block;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+div.mxwidth {
+  color: white;
+  width: 500px;
+  margin: auto;
+  border: 3px solid #73ad21;
+}
+
+.posrelative {
+  position: relative;
+}
+
+.box1 {
+  position: relative;
+  border: 2px solid cyan;
+  height: 100px;
+  margin: 30px;
+}
+
+.box2 {
+  position: absolute;
+  background: tomato;
+  height: 60px;
+  width: 70%;
+  left: 50px;
+  top: 50px;
+}
+
+.box3 {
+  position: absolute;
+  background: violet;
+  width: 35%;
+  left: 270px;
+  top: -15px;
+  height: 100px;
+}
+
+div.overflow {
+  background-color: cyan;
+  width: 200px;
+  height: 75px;
+  border: 1px solid black;
+  overflow: auto;
+}
+
+.align {
+  text-align: center;
+  border: 3px solid cyan;
+  margin-top: 20px;
+  color: Orange;
+}
+
+.prodemy {
+  background-color: cyan;
+  font-family: "Noto Sans Mono", monospace;
+  font-family: "Roboto", sans-serif;
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 30px;
+  color: Violet;
+  display: inline-block;
+}
