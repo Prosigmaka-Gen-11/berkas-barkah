@@ -1,0 +1,8 @@
+.feature {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 60px;
+  width: 60px;
+  font-size: 30px;
+}
