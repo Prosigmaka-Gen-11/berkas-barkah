@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .btn-primary {
+    @apply p-4 text-white bg-primary font-bold rounded shadow hover:shadow-2xl transition-shadow active:bg-amber-700;
+  }
+}
