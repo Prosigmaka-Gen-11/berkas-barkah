@@ -11,8 +11,8 @@ const buatVar = {
     jurusan: "informatika",
     fakultas: "informatika",
   },
-  sayaKuliahDimana: function kuliahDisini() {
-    return this.nama + this.kuliah.jurusan;
+  sayaKuliahDimana: function () {
+    return "nama: " + this.nama + ", " + "jurusan:" + this.kuliah.jurusan;
   },
   manggilPerkalian: perkalian,
 };
@@ -20,3 +20,4 @@ const buatVar = {
 // bagian 3 menampilkan consolelog function perkalian
 const count = buatVar.manggilPerkalian(2, 2);
 console.log(count);
+console.log(buatVar.sayaKuliahDimana());
