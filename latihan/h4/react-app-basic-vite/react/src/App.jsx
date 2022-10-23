@@ -1,34 +1,84 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import './App.css'
+import React from "react";
+import Children, { Name } from "./Children";
+import LifeCycle from "./LifeCycle";
+import SideEffect from "./SideEffect";
 
-function App() {
-  const [count, setCount] = useState(0)
+class App extends React.Component {
+  // property state
 
-  return (
-    <div className="App">
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src="/vite.svg" className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://reactjs.org" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
+  constructor(props) {
+    super(props);
+    this.state = {
+      name: "barkah",
+      munculinLifecycle: true,
+      munculinSideEffect: true,
+    };
+  }
+
+  // // without constructor
+  // state = {
+  //   name: "barkah",
+  // };
+
+  // function
+  ubahNama() {
+    this.setState({
+      name: "barganss",
+    });
+  }
+
+  render() {
+    return (
+      <>
+        <h1>sipppp {this.state.name}</h1>
+        <button onClick={() => this.ubahNama()}> ubah nama {Name} </button>
+
+        {/* children */}
+        <Children
+          name="sipy"
+          sebutNama={(namaYgDisebut) => {
+            alert("Hai " + namaYgDisebut);
+            this.setState({
+              name: namaYgDisebut,
+            });
+          }}
+        />
+
+        {/* lifecycle for class */}
+
+        <button onClick={() => this.setState({ munculinLifecycle: false })}>
+          hilangin Lifecycle
         </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </div>
-  )
+
+        {this.state.munculinLifecycle ? (
+          <LifeCycle name={this.state.name} />
+        ) : null}
+
+        {/* contoh else if */}
+        {/* {this.state.munculinLifecycle ? (
+          <>
+            <h1>Bagian dari lifecycle</h1>
+            <h2>Aku juga</h2>
+            <LifeCycle name={this.state.name} />
+          </>
+        ) : this.state.name == "kah" ? (
+          <h2>nama ku steve</h2>
+        ) : this.state.name == "kahuhuy" ? (
+          <h2>nama ku mubarok</h2>
+        ) : null} */}
+        <br />
+        <br />
+
+        {/* sideeffect for function */}
+
+        <button onClick={() => this.setState({ munculinSideEffect: false })}>
+          hilangin SideEffect
+        </button>
+
+        {this.state.munculinSideEffect ? <SideEffect /> : null}
+      </>
+    );
+  }
 }
 
-export default App
+export default App;
