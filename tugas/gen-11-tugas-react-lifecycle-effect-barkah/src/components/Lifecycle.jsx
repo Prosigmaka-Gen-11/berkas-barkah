@@ -24,6 +24,7 @@ class LifeCycle extends React.Component {
 
   componentDidMount() {
     console.log("subscribe to db pc");
+    console.log(`${this.state.count} testing`);
     document.addEventListener("mousemove", this.getMouseMoveEvent);
     console.log("get from db pc");
     this.setState({
@@ -33,12 +34,12 @@ class LifeCycle extends React.Component {
       gpu: "Click Button",
       ram: "Click Button",
     });
-    document.write = `${this.state.count} pcs`;
   }
 
   componentDidUpdate(propsPrev, statePrev) {
     console.log(statePrev);
     console.log(this.setState);
+    console.log(`${this.state.count} testing`);
 
     if (
       statePrev.mobo !== this.state.mobo ||
@@ -51,8 +52,6 @@ class LifeCycle extends React.Component {
         listparts: `list parts for Motherboard ${this.state.mobo}, for Processor ${this.state.cpu}, for VGA ${this.state.gpu}, for RAM ${this.state.ram}. ${this.state.pc}`,
       });
     }
-
-    document.write = `${this.state.count} pcs`;
   }
 
   componentWillUnmount() {

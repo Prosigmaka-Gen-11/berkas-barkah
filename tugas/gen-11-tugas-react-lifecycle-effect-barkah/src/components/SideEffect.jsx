@@ -18,6 +18,7 @@ function SideEffect() {
 
   useEffect(() => {
     console.log("side effect every updates");
+    console.log(`${count} testing`);
     return () => {
       console.log("side effect before next way");
     };
