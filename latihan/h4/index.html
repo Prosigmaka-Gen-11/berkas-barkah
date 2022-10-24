@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>react</title>
+  </head>
+  <body>
+    <h1 class="text-7xl">sip</h1>
+    <div id="app"></div>
+
+    <!-- cdn react-->
+    <script
+      src="https://unpkg.com/react@18/umd/react.development.js"
+      crossorigin
+    ></script>
+    <script
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+      crossorigin
+    ></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+
+    <!-- react -->
+    <script type="text/babel">
+      function MyButton() {
+        return (
+          <button
+            className="rounded bg-cyan-400 p-2"
+            onClick={() => setName("sipzip")}
+          >
+            buttonbaru
+          </button>
+        );
+      }
+
+      function App() {
+        const [name, setName] = React.useState("zippppp");
+        let [num, setNum] = React.useState(20);
+        return (
+          <div>
+            <h2 className="text-6xl">
+              tes {name}, your {num} now
+            </h2>
+
+            <MyButton />
+
+            <br />
+
+            <button
+              className="rounded bg-cyan-400 p-2"
+              onClick={() => setName("sipzip")}
+            >
+              ubah
+            </button>
+            <br />
+            <br />
+            <button
+              className="rounded bg-cyan-400 p-2"
+              onClick={() => setNum(23)}
+            >
+              ubahnum
+            </button>
+          </div>
+        );
+      }
+
+      const domContainer = document.querySelector("#app");
+      const root = ReactDOM.createRoot(domContainer);
+      const element = React.createElement(App);
+      root.render(element);
+    </script>
+  </body>
+</html>
