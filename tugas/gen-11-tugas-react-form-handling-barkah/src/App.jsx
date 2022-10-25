@@ -7,7 +7,8 @@ function App() {
       <ClassFormHandlingHook />
       <br />
       <hr />
-      <br />
+      <hr />
+      <hr />
       <FuncFormHandlingHook />
     </>
   );
