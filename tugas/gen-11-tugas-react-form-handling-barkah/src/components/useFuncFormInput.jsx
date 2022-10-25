@@ -8,16 +8,15 @@ function useFuncFormInput(inputData) {
   }
 
   function handleCheckbox(event) {
-    const { value, checked } = event.target;
     const { delivery } = formInput;
 
-    if (checked) {
+    if (event.target.checked) {
       setFormInput({
-        delivery: [...delivery, value],
+        delivery: [...delivery, event.target.value],
       });
     } else {
       setFormInput({
-        delivery: delivery.filter((event) => event !== value),
+        delivery: delivery.filter((event) => event !== event.target.value),
       });
     }
   }

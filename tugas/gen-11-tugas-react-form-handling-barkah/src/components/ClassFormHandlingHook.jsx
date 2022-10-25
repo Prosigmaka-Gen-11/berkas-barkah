@@ -31,16 +31,15 @@ class ClassFormHandlingHook extends React.Component {
   }
 
   handleCheckbox(event) {
-    const { value, checked } = event.target;
     const { delivery } = this.state;
 
-    if (checked) {
+    if (event.target.checked) {
       this.setState({
-        delivery: [...delivery, value],
+        delivery: [...delivery, event.target.value],
       });
     } else {
       this.setState({
-        delivery: delivery.filter((event) => event !== value),
+        delivery: delivery.filter((event) => event !== event.target.value),
       });
     }
   }
