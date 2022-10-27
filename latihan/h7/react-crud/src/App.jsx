@@ -51,7 +51,7 @@ function App() {
 
   return (
     <>
-      <h1>tes</h1>
+      <h1>tess</h1>
       <table border="1" width="100%">
         <thead>
           <tr>
