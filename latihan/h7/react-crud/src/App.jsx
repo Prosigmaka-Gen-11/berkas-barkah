@@ -63,8 +63,8 @@ function App() {
         <tbody>
           {articles.map((article) => (
             <tr key={article.id}>
-              <td>{articles.title}</td>
-              <td>{articles.author}</td>
+              <td>{article.title}</td>
+              <td>{article.author}</td>
               <td>
                 <button onClick={() => funcEdit(article)}>Edit</button>
                 <button onClick={() => funcDelete(article.id)}>Hapus</button>
