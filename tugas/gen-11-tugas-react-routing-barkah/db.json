@@ -1,0 +1,83 @@
+{
+  "nbkomputer": [
+    {
+      "id": 1,
+      "brand": "ASRock",
+      "mobo": "ASRock B550 Pro4",
+      "category": "Mobo",
+      "condition": "New",
+      "delivery": [
+        "EntarAja",
+        "SiLelet"
+      ],
+      "releaseDate": "2022-10-27",
+      "description": "mobo keluar baru dengan pcie gen 4"
+    },
+    {
+      "id": 2,
+      "brand": "ASUS",
+      "mobo": "ASUS B450 Pro4",
+      "category": "Mobo",
+      "condition": "Used",
+      "delivery": [
+        "Ninja Brake",
+        "EntarAja",
+        "SiLelet"
+      ],
+      "releaseDate": "2022-10-27",
+      "description": "mobo keluar baru dengan pcie gen 3"
+    },
+    {
+      "brand": "tes",
+      "mobo": "tes",
+      "category": "Mobo",
+      "condition": "Used",
+      "delivery": [
+        "SiLelet",
+        "EntarAja",
+        "Ninja Brake"
+      ],
+      "releaseDate": "2022-10-27",
+      "description": "sadsa",
+      "id": 3
+    },
+    {
+      "brand": "Gigabyte",
+      "mobo": "Gigabyte B660 Aorus Edition",
+      "category": "Mobo",
+      "condition": "New",
+      "delivery": [
+        "Ninja Brake"
+      ],
+      "releaseDate": "2022-10-11",
+      "description": "mobo ini limited edition",
+      "id": 4
+    },
+    {
+      "brand": "asdsa",
+      "mobo": "asdas",
+      "category": "Mobo",
+      "condition": "New",
+      "delivery": [
+        "SiLelet",
+        "EntarAja"
+      ],
+      "releaseDate": "2022-10-28",
+      "description": "sadsa",
+      "id": 6
+    },
+    {
+      "brand": "asdsadtesssuhuy",
+      "mobo": "asdsa",
+      "category": "Mobo",
+      "condition": "New",
+      "delivery": [
+        "SiLelet",
+        "EntarAja"
+      ],
+      "releaseDate": "2022-10-28",
+      "description": "sadas",
+      "id": 7
+    }
+  ]
+}
