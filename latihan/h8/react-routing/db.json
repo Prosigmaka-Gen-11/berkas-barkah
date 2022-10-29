@@ -1,0 +1,14 @@
+{
+  "games": [
+    {
+      "id": 1,
+      "name": "Apex",
+      "publisher": "Electronic Arts"
+    },
+    {
+      "id": 2,
+      "name": "Valorant",
+      "publisher": "Riot Games"
+    }
+  ]
+}
