@@ -80,6 +80,9 @@ function KomDetail() {
       <button>
         <Link to={"/kom/form"}>Form</Link>
       </button>
+      <button>
+        <Link to={"/"}>Home</Link>
+      </button>
     </>
   );
 }

@@ -91,6 +91,18 @@
       "releaseDate": "2022-09-28",
       "description": "sda",
       "id": 8
+    },
+    {
+      "brand": "tesnewtesnew",
+      "mobo": "tesnew",
+      "category": "VGA",
+      "condition": "Used",
+      "delivery": [
+        "SiLelet"
+      ],
+      "releaseDate": "2022-10-05",
+      "description": "tesnew",
+      "id": 9
     }
   ]
 }

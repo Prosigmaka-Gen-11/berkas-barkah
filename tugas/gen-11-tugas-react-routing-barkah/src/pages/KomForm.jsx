@@ -197,6 +197,9 @@ function KomForm() {
         <button>
           <Link to={"/kom/list"}>List</Link>
         </button>
+        <button>
+          <Link to={"/"}>Home</Link>
+        </button>
       </form>
     </>
   );

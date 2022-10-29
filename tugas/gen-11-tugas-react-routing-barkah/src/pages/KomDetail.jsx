@@ -26,7 +26,7 @@ function KomDetail() {
         <li>Type Motherboard: {kom.mobo}</li>
         <li>Category: {kom.category}</li>
         <li>Condition: {kom.condition}</li>
-        <li>Delivery: {kom.delivery.join(", ")}</li>
+        <li>Delivery: {kom.delivery}</li>
         <li>Release Date: {kom.releaseDate}</li>
         <li>Description: {kom.description}</li>
       </ul>
