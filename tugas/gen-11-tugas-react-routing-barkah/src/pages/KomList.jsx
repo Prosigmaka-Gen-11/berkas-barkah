@@ -76,6 +76,10 @@ function KomDetail() {
           ))}
         </tbody>
       </table>
+      <br />
+      <button>
+        <Link to={"/kom/form"}>Form</Link>
+      </button>
     </>
   );
 }

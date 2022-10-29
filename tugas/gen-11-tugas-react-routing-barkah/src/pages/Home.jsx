@@ -4,7 +4,9 @@ function Home() {
   return (
     <>
       <h1>Ini Home</h1>
-      <Link to="/about">Ke About</Link>
+      <Link to="/kom/list">Ke List</Link>
+      <br />
+      <Link to="/kom/form">Ke Form</Link>
     </>
   );
 }

@@ -78,6 +78,19 @@
       "releaseDate": "2022-10-28",
       "description": "sadas",
       "id": 7
+    },
+    {
+      "brand": "teslagi ini edit",
+      "mobo": "treslagi",
+      "category": "Mobo",
+      "condition": "Used",
+      "delivery": [
+        "SiLelet",
+        "EntarAja"
+      ],
+      "releaseDate": "2022-09-28",
+      "description": "sda",
+      "id": 8
     }
   ]
 }
