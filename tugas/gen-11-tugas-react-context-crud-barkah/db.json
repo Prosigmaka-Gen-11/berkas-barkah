@@ -1,0 +1,22 @@
+{
+  "nbkomputer": [
+    {
+      "id": 1,
+      "brand": "ASRock",
+      "mobo": "ASRock B550 Pro4",
+      "category": "Mobo"
+    },
+    {
+      "id": 2,
+      "brand": "ASUS",
+      "mobo": "ASUS B450 Pro4",
+      "category": "Mobo"
+    },
+    {
+      "brand": "tess",
+      "mobo": "tess",
+      "category": "Mobo",
+      "id": 3
+    }
+  ]
+}
