@@ -1,10 +1,10 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import KomProvider from "./KomProvider";
 import KomForm from "./KomForm";
+import KomList from "./KomList";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-  <KomProvider>
-    <KomForm />
-  </KomProvider>
+  <KomForm>
+    <KomList />
+  </KomForm>
 );

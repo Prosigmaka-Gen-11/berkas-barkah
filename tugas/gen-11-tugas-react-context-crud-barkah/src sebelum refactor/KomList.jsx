@@ -1,19 +1,8 @@
-import { useContext, useEffect } from "react";
-import { KomContext } from "./KomProvider";
-import axios from "axios";
+import { useContext } from "react";
+import { KomContext } from "./KomForm";
 
-function KomList(props) {
-  const ContextFromProvider = useContext(KomContext);
-
-  //call
-  async function getNbkomputer() {
-    const result = await axios.get("http://localhost:3000/nbkomputer");
-    ContextFromProvider.setNbkomputer(result.data);
-  }
-
-  useEffect(() => {
-    getNbkomputer();
-  }, []);
+function KomList() {
+  const { nbkomputer } = useContext(KomContext);
 
   return (
     <>
@@ -28,7 +17,7 @@ function KomList(props) {
           </tr>
         </thead>
         <tbody>
-          {ContextFromProvider.nbkomputer.map((nbkom) => (
+          {nbkomputer.map((nbkom) => (
             <tr key={nbkom.id}>
               <td>{nbkom.brand}</td>
               <td>{nbkom.mobo}</td>

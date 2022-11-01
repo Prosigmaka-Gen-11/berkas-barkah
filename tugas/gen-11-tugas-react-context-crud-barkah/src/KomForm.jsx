@@ -1,8 +1,7 @@
-import { createContext, useState, useEffect } from "react";
-import KomList from "./KomList";
+import { useContext, useState, useEffect } from "react";
+import { KomContext } from "./KomProvider";
 import axios from "axios";
-
-export const KomContext = createContext();
+import KomList from "./KomList";
 
 const initialForm = {
   brand: "",
@@ -10,90 +9,81 @@ const initialForm = {
   category: "",
 };
 
-function KomProvider(props) {
-  const [nbkomputer, setNbkomputer] = useState([]);
-  const [formInput, setFormInput] = useState({ ...initialForm });
-
-  //call
-  async function getNbkomputer() {
-    const result = await axios.get("http://localhost:3000/nbkomputer");
-    setNbkomputer(result.data);
-  }
+function KomForm() {
+  const ContextFromProvider = useContext(KomContext);
 
   //handleinput
   function handleInput(evt, inputName) {
-    setFormInput({ ...formInput, [inputName]: evt.target.value });
+    ContextFromProvider.setFormInput({
+      ...ContextFromProvider.formInput,
+      [inputName]: evt.target.value,
+    });
   }
 
   //handlesubmit
   async function handleSubmit(evt) {
-    evt.preventDefault();
-
-    await axios.post("http://localhost:3000/nbkomputer", formInput);
-
-    getNbkomputer();
-    setFormInput({ ...initialForm });
+    // evt.preventDefault();
+    await axios.post(
+      "http://localhost:3000/nbkomputer",
+      ContextFromProvider.formInput
+    );
+    ContextFromProvider.setFormInput({ ...initialForm });
   }
-
-  useEffect(() => {
-    getNbkomputer();
-  }, []);
 
   return (
     <>
-      <KomContext.Provider value={{ nbkomputer }}>
-        {props.children}
+      <KomList />
+      <br />
+      <hr />
+      <br />
+      <h1>Ini Form</h1>
+      <form onSubmit={handleSubmit}>
+        <label>
+          Brand: <br />
+          <input
+            type="text"
+            value={ContextFromProvider.formInput.brand}
+            onChange={(evt) => handleInput(evt, "brand")}
+          />
+        </label>
+
         <br />
-        <hr />
-        <h1>Ini Form</h1>
-        <form onSubmit={handleSubmit}>
-          <label>
-            Brand: <br />
-            <input
-              type="text"
-              value={formInput.brand}
-              onChange={(evt) => handleInput(evt, "brand")}
-            />
-          </label>
+        <br />
 
-          <br />
-          <br />
+        <label>
+          Type Motherboard: <br />
+          <input
+            type="text"
+            value={ContextFromProvider.formInput.mobo}
+            onChange={(evt) => handleInput(evt, "mobo")}
+          />
+        </label>
 
-          <label>
-            Type Motherboard: <br />
-            <input
-              type="text"
-              value={formInput.mobo}
-              onChange={(evt) => handleInput(evt, "mobo")}
-            />
-          </label>
+        <br />
+        <br />
 
-          <br />
-          <br />
+        <label>
+          Category: <br />
+          <select
+            value={ContextFromProvider.formInput.category}
+            onChange={(evt) => handleInput(evt, "category")}
+          >
+            <option value="" disabled>
+              -- Option
+            </option>
+            <option>Mobo</option>
+            <option>Proci</option>
+            <option>VGA</option>
+          </select>
+        </label>
 
-          <label>
-            Category: <br />
-            <select
-              value={formInput.category}
-              onChange={(evt) => handleInput(evt, "category")}
-            >
-              <option value="" disabled>
-                -- Option
-              </option>
-              <option>Mobo</option>
-              <option>Proci</option>
-              <option>VGA</option>
-            </select>
-          </label>
+        <br />
+        <br />
 
-          <br />
-          <br />
-
-          <button>Submit</button>
-        </form>
-      </KomContext.Provider>
+        <button>Submit</button>
+      </form>
     </>
   );
 }
 
-export default KomProvider;
+export default KomForm;

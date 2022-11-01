@@ -17,6 +17,29 @@
       "mobo": "tess",
       "category": "Mobo",
       "id": 3
+    },
+    {
+      "brand": "asdasdas",
+      "mobo": "asdas",
+      "category": "Proci",
+      "id": 4
+    },
+    {
+      "brand": "aasdsa",
+      "mobo": "zxczx",
+      "category": "Proci",
+      "id": 5
+    },
+    {
+      "brand": "y",
+      "mobo": "y",
+      "category": "VGA",
+      "id": 6
+    },
+    {
+      "brand": "sadasdas",
+      "mobo": "asdas",
+      "id": 7
     }
   ]
 }
