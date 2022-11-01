@@ -19,27 +19,34 @@
       "id": 3
     },
     {
-      "brand": "asdasdas",
+      "brand": "asdas",
       "mobo": "asdas",
-      "category": "Proci",
+      "category": "Mobo",
       "id": 4
     },
     {
-      "brand": "aasdsa",
-      "mobo": "zxczx",
-      "category": "Proci",
+      "brand": "tes",
+      "mobo": "tes",
+      "category": "Mobo",
       "id": 5
     },
     {
-      "brand": "y",
-      "mobo": "y",
+      "brand": "dfgdfgfd",
+      "mobo": "dfgdf",
       "category": "VGA",
       "id": 6
     },
     {
-      "brand": "sadasdas",
-      "mobo": "asdas",
+      "brand": "ttt",
+      "mobo": "ttt",
+      "category": "Mobo",
       "id": 7
+    },
+    {
+      "brand": "uhuy",
+      "mobo": "uhuy",
+      "category": "Proci",
+      "id": 8
     }
   ]
 }
