@@ -29,13 +29,26 @@ function Carts() {
   return (
     <>
       <h1>ini API Carts</h1>
-      <ul>
-        {carts.map((cart) => (
-          <li key={cart.id}>
-            {cart.products[0].title} - ${cart.products[0].price}
-          </li>
-        ))}
-      </ul>
+      <table border="1" width="100%">
+        <thead>
+          <tr>
+            <th>Title Products</th>
+            <th>Price Products</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          {carts.map((cart) => (
+            <tr key={cart.id}>
+              <td>{cart.products[0].title}</td>
+              <td>${cart.products[0].price}</td>
+              <td></td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+      <br />
+      <br />
       <Link to="/">
         <button>Home</button>
       </Link>

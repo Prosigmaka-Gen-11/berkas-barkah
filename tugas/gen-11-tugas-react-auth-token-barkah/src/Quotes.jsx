@@ -29,13 +29,26 @@ function Quotes() {
   return (
     <>
       <h1>ini API Quotes</h1>
-      <ul>
-        {quotes.map((quote) => (
-          <li key={quote.id}>
-            {quote.quote} - Author: {quote.author}
-          </li>
-        ))}
-      </ul>
+      <table border="1" width="100%">
+        <thead>
+          <tr>
+            <th>Quotes</th>
+            <th>Author</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          {quotes.map((quote) => (
+            <tr key={quote.id}>
+              <td>{quote.quote}</td>
+              <td>{quote.author}</td>
+              <td></td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+      <br />
+      <br />
       <Link to="/">
         <button>Home</button>
       </Link>
