@@ -1,5 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 
+// blm kepake pas refresh malah jadi undefined (pas refresh jadi error putih semua)
 function getLocalUserData() {
   const savedUserData = localStorage.getItem("userData");
 
@@ -11,6 +12,7 @@ function getLocalUserData() {
   }
 }
 
+// ini bisa terus pas refresh juga udah
 function getLocalToken() {
   const savedToken = localStorage.getItem("token");
   return savedToken ?? null;
@@ -18,7 +20,7 @@ function getLocalToken() {
 
 const initialState = {
   userData: {},
-  token: null,
+  token: getLocalToken(),
   isLogin: localStorage.getItem("token"),
 };
 
