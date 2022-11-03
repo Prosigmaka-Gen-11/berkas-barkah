@@ -28,7 +28,7 @@ function Login() {
       });
   }
 
-  if (authSlice.isLogin != null) {
+  if (authSlice.isLogin) {
     return <Navigate to="/" />;
   }
   return (
