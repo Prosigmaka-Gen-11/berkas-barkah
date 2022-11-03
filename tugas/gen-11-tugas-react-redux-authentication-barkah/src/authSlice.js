@@ -21,7 +21,7 @@ function getLocalToken() {
 const initialState = {
   userData: {},
   token: getLocalToken(),
-  isLogin: localStorage.getItem("token"),
+  isLogin: getLocalToken() != null,
 };
 
 const authSlice = createSlice({
